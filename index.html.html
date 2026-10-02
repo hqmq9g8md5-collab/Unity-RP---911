@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unity Role Play · Destruction des armes à feu — Grille tarifaire</title>
+
+
+<style type="text/css">@font-face {font-family:'IBM Plex Mono';font-style:normal;font-weight:400;src:url(/cf-fonts/s/ibm-plex-mono/5.2.7/vietnamese/400/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:'IBM Plex Mono';font-style:normal;font-weight:400;src:url(/cf-fonts/s/ibm-plex-mono/5.2.7/latin/400/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'IBM Plex Mono';font-style:normal;font-weight:400;src:url(/cf-fonts/s/ibm-plex-mono/5.2.7/cyrillic/400/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:'IBM Plex Mono';font-style:normal;font-weight:400;src:url(/cf-fonts/s/ibm-plex-mono/5.2.7/cyrillic-ext/400/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:'IBM Plex Mono';font-style:normal;font-weight:400;src:url(/cf-fonts/s/ibm-plex-mono/5.2.7/latin-ext/400/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:'IBM Plex Mono';font-style:normal;font-weight:500;src:url(/cf-fonts/s/ibm-plex-mono/5.2.7/latin-ext/500/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:'IBM Plex Mono';font-style:normal;font-weight:500;src:url(/cf-fonts/s/ibm-plex-mono/5.2.7/latin/500/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'IBM Plex Mono';font-style:normal;font-weight:500;src:url(/cf-fonts/s/ibm-plex-mono/5.2.7/vietnamese/500/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:'IBM Plex Mono';font-style:normal;font-weight:500;src:url(/cf-fonts/s/ibm-plex-mono/5.2.7/cyrillic/500/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:'IBM Plex Mono';font-style:normal;font-weight:500;src:url(/cf-fonts/s/ibm-plex-mono/5.2.7/cyrillic-ext/500/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:'IBM Plex Mono';font-style:normal;font-weight:600;src:url(/cf-fonts/s/ibm-plex-mono/5.2.7/latin/600/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'IBM Plex Mono';font-style:normal;font-weight:600;src:url(/cf-fonts/s/ibm-plex-mono/5.2.7/latin-ext/600/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:'IBM Plex Mono';font-style:normal;font-weight:600;src:url(/cf-fonts/s/ibm-plex-mono/5.2.7/vietnamese/600/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:'IBM Plex Mono';font-style:normal;font-weight:600;src:url(/cf-fonts/s/ibm-plex-mono/5.2.7/cyrillic/600/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:'IBM Plex Mono';font-style:normal;font-weight:600;src:url(/cf-fonts/s/ibm-plex-mono/5.2.7/cyrillic-ext/600/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:'Inter';font-style:normal;font-weight:300;src:url(/cf-fonts/v/inter/5.2.8/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'Inter';font-style:normal;font-weight:300;src:url(/cf-fonts/v/inter/5.2.8/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:'Inter';font-style:normal;font-weight:300;src:url(/cf-fonts/v/inter/5.2.8/greek-ext/wght/normal.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:'Inter';font-style:normal;font-weight:300;src:url(/cf-fonts/v/inter/5.2.8/latin-ext/wght/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:'Inter';font-style:normal;font-weight:300;src:url(/cf-fonts/v/inter/5.2.8/vietnamese/wght/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:'Inter';font-style:normal;font-weight:300;src:url(/cf-fonts/v/inter/5.2.8/cyrillic-ext/wght/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:'Inter';font-style:normal;font-weight:300;src:url(/cf-fonts/v/inter/5.2.8/greek/wght/normal.woff2);unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF;font-display:swap;}@font-face {font-family:'Inter';font-style:normal;font-weight:400;src:url(/cf-fonts/v/inter/5.2.8/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'Inter';font-style:normal;font-weight:400;src:url(/cf-fonts/v/inter/5.2.8/greek-ext/wght/normal.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:'Inter';font-style:normal;font-weight:400;src:url(/cf-fonts/v/inter/5.2.8/cyrillic-ext/wght/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:'Inter';font-style:normal;font-weight:400;src:url(/cf-fonts/v/inter/5.2.8/latin-ext/wght/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:'Inter';font-style:normal;font-weight:400;src:url(/cf-fonts/v/inter/5.2.8/greek/wght/normal.woff2);unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF;font-display:swap;}@font-face {font-family:'Inter';font-style:normal;font-weight:400;src:url(/cf-fonts/v/inter/5.2.8/vietnamese/wght/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:'Inter';font-style:normal;font-weight:400;src:url(/cf-fonts/v/inter/5.2.8/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:'Inter';font-style:normal;font-weight:500;src:url(/cf-fonts/v/inter/5.2.8/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:'Inter';font-style:normal;font-weight:500;src:url(/cf-fonts/v/inter/5.2.8/latin-ext/wght/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:'Inter';font-style:normal;font-weight:500;src:url(/cf-fonts/v/inter/5.2.8/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'Inter';font-style:normal;font-weight:500;src:url(/cf-fonts/v/inter/5.2.8/vietnamese/wght/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:'Inter';font-style:normal;font-weight:500;src:url(/cf-fonts/v/inter/5.2.8/greek-ext/wght/normal.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:'Inter';font-style:normal;font-weight:500;src:url(/cf-fonts/v/inter/5.2.8/greek/wght/normal.woff2);unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF;font-display:swap;}@font-face {font-family:'Inter';font-style:normal;font-weight:500;src:url(/cf-fonts/v/inter/5.2.8/cyrillic-ext/wght/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:'Inter';font-style:normal;font-weight:600;src:url(/cf-fonts/v/inter/5.2.8/latin-ext/wght/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:'Inter';font-style:normal;font-weight:600;src:url(/cf-fonts/v/inter/5.2.8/greek-ext/wght/normal.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:'Inter';font-style:normal;font-weight:600;src:url(/cf-fonts/v/inter/5.2.8/cyrillic-ext/wght/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:'Inter';font-style:normal;font-weight:600;src:url(/cf-fonts/v/inter/5.2.8/vietnamese/wght/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:'Inter';font-style:normal;font-weight:600;src:url(/cf-fonts/v/inter/5.2.8/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:'Inter';font-style:normal;font-weight:600;src:url(/cf-fonts/v/inter/5.2.8/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'Inter';font-style:normal;font-weight:600;src:url(/cf-fonts/v/inter/5.2.8/greek/wght/normal.woff2);unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF;font-display:swap;}@font-face {font-family:'Inter';font-style:normal;font-weight:700;src:url(/cf-fonts/v/inter/5.2.8/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:'Inter';font-style:normal;font-weight:700;src:url(/cf-fonts/v/inter/5.2.8/cyrillic-ext/wght/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:'Inter';font-style:normal;font-weight:700;src:url(/cf-fonts/v/inter/5.2.8/latin-ext/wght/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}@font-face {font-family:'Inter';font-style:normal;font-weight:700;src:url(/cf-fonts/v/inter/5.2.8/vietnamese/wght/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:'Inter';font-style:normal;font-weight:700;src:url(/cf-fonts/v/inter/5.2.8/greek/wght/normal.woff2);unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF;font-display:swap;}@font-face {font-family:'Inter';font-style:normal;font-weight:700;src:url(/cf-fonts/v/inter/5.2.8/greek-ext/wght/normal.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:'Inter';font-style:normal;font-weight:700;src:url(/cf-fonts/v/inter/5.2.8/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'Inter';font-style:normal;font-weight:800;src:url(/cf-fonts/v/inter/5.2.8/cyrillic/wght/normal.woff2);unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;font-display:swap;}@font-face {font-family:'Inter';font-style:normal;font-weight:800;src:url(/cf-fonts/v/inter/5.2.8/latin/wght/normal.woff2);unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;font-display:swap;}@font-face {font-family:'Inter';font-style:normal;font-weight:800;src:url(/cf-fonts/v/inter/5.2.8/vietnamese/wght/normal.woff2);unicode-range:U+0102-0103,U+0110-0111,U+0128-0129,U+0168-0169,U+01A0-01A1,U+01AF-01B0,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+0329,U+1EA0-1EF9,U+20AB;font-display:swap;}@font-face {font-family:'Inter';font-style:normal;font-weight:800;src:url(/cf-fonts/v/inter/5.2.8/greek/wght/normal.woff2);unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF;font-display:swap;}@font-face {font-family:'Inter';font-style:normal;font-weight:800;src:url(/cf-fonts/v/inter/5.2.8/greek-ext/wght/normal.woff2);unicode-range:U+1F00-1FFF;font-display:swap;}@font-face {font-family:'Inter';font-style:normal;font-weight:800;src:url(/cf-fonts/v/inter/5.2.8/cyrillic-ext/wght/normal.woff2);unicode-range:U+0460-052F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;font-display:swap;}@font-face {font-family:'Inter';font-style:normal;font-weight:800;src:url(/cf-fonts/v/inter/5.2.8/latin-ext/wght/normal.woff2);unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;font-display:swap;}</style>
+<style>
+:root{
+  --bg:#08090c; --panel:#111318; --panel2:#161920; --ink:#0c0e12;
+  --line:#23262e; --line2:#32363f;
+  --txt:#e6e8ec; --mut:#7d838f; --dim:#565c68;
+  --acc:#c8202e; --acc2:#ff5a63; --gold:#c9a227; --gold2:#e3c05a;
+  --ok:#3fae72; --warn:#d9534f;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--txt);
+  font-family:Inter,"Segoe UI",system-ui,sans-serif;-webkit-font-smoothing:antialiased;
+  background-image:
+    linear-gradient(rgba(200,32,46,.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(200,32,46,.035) 1px, transparent 1px);
+  background-size:46px 46px;background-attachment:fixed}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:radial-gradient(1100px 560px at 50% -15%, rgba(200,32,46,.12), transparent 65%)}
+
+/* ===== BANDEAU ===== */
+.classbar{position:relative;z-index:2;background:#0c0e12;border-bottom:1px solid var(--acc);
+  display:flex;gap:14px;align-items:center;justify-content:center;padding:7px 16px;flex-wrap:wrap;
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.2em;color:#ffb9bd;text-transform:uppercase}
+.classbar em{color:var(--dim);font-style:normal}
+.classbar .live{display:inline-flex;align-items:center;gap:6px;color:var(--ok)}
+.classbar .live i{width:6px;height:6px;border-radius:50%;background:var(--ok);animation:pulse 1.8s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.45}}
+
+/* ===== EN-TÊTE ===== */
+header{position:relative;z-index:2;border-bottom:1px solid var(--line);background:linear-gradient(180deg,#0b0d11,#08090c)}
+.head{max-width:1340px;margin:auto;padding:22px 26px;display:flex;align-items:center;gap:22px;flex-wrap:wrap}
+.logo{width:72px;height:72px;flex:0 0 72px;border-radius:14px;display:grid;place-items:center;
+  background:linear-gradient(150deg,#c8202e,#7c1119);color:#fff;
+  box-shadow:0 8px 26px rgba(200,32,46,.35), inset 0 1px 0 rgba(255,255,255,.18)}
+.titles{flex:1;min-width:280px}
+.kicker{font-family:var(--mono);font-size:11px;letter-spacing:.28em;color:var(--acc2);text-transform:uppercase}
+h1{margin:6px 0 4px;font-size:28px;font-weight:800;letter-spacing:-.4px;text-transform:uppercase}
+h1 .thin{font-weight:300;color:var(--mut)}
+.sub{font-family:var(--mono);font-size:12px;color:var(--mut)}
+.srv{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.chip{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;
+  padding:9px 13px;border-radius:4px;border:1px solid var(--line2);background:#0e1014;color:var(--mut)}
+.chip b{color:var(--txt);font-weight:600}
+.chip.on{border-color:rgba(63,174,114,.4);color:#8ce0b3;background:rgba(63,174,114,.09)}
+
+/* ===== INDEX ===== */
+.index{position:relative;z-index:2;background:#0a0c10;border-bottom:1px solid var(--line)}
+.index .in{max-width:1340px;margin:auto;padding:9px 26px;display:flex;gap:8px;flex-wrap:wrap}
+.index a{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--mut);text-decoration:none;border:1px solid var(--line);border-radius:5px;padding:5px 11px;transition:.15s}
+.index a:hover{color:#fff;border-color:var(--acc);background:rgba(200,32,46,.14)}
+
+/* ===== LAYOUT ===== */
+main{position:relative;z-index:2;max-width:1340px;margin:auto;padding:26px 26px 10px}
+.panel{background:linear-gradient(180deg,var(--panel2),var(--panel));border:1px solid var(--line);
+  border-radius:10px;margin-bottom:24px;overflow:hidden;box-shadow:0 12px 32px rgba(0,0,0,.4)}
+.panel > .cap{display:flex;align-items:center;gap:12px;padding:13px 18px;
+  background:#0c0e12;border-bottom:1px solid var(--line)}
+.cap .fold{width:4px;height:16px;border-radius:2px;background:var(--acc);flex:0 0 4px}
+.cap h2{margin:0;font-family:var(--mono);font-size:12px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--txt);font-weight:600}
+.cap .ref{margin-left:auto;font-family:var(--mono);font-size:10.5px;color:var(--dim);letter-spacing:.12em}
+.body{padding:20px}
+
+/* ===== PARAMÈTRES ===== */
+.params{display:grid;grid-template-columns:repeat(auto-fit,minmax(238px,1fr));gap:16px}
+.grp{border:1px solid var(--line);border-radius:8px;background:#0d0f14;padding:14px 15px 15px}
+.grp .gl{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--mut);margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.grp .gl b{color:var(--acc2);font-weight:600}
+.row{display:flex;gap:10px;align-items:center}
+input[type=range]{-webkit-appearance:none;appearance:none;flex:1;height:4px;border-radius:2px;
+  background:linear-gradient(90deg,var(--acc),var(--line2));outline:none}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:15px;height:15px;border-radius:50%;
+  background:#fff;border:3px solid var(--acc);cursor:pointer;box-shadow:0 0 0 4px rgba(200,32,46,.16)}
+input[type=range]::-moz-range-thumb{width:14px;height:14px;border-radius:50%;background:#fff;
+  border:3px solid var(--acc);cursor:pointer}
+input,select{background:#080a0e;color:var(--txt);border:1px solid var(--line);border-radius:6px;
+  padding:8px 10px;font-size:13.5px;font-family:inherit;transition:.15s}
+input:focus,select:focus{outline:none;border-color:var(--acc);box-shadow:0 0 0 3px rgba(200,32,46,.2)}
+.grp input[type=number]{width:78px;text-align:right;font-family:var(--mono);font-size:13px}
+.readout{margin-top:12px;padding-top:11px;border-top:1px dashed var(--line);
+  display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:11.5px;color:var(--mut)}
+.badge{font-family:var(--mono);font-size:11.5px;font-weight:600;padding:4px 10px;border-radius:999px;
+  background:rgba(200,32,46,.14);border:1px solid rgba(255,90,99,.34);color:var(--acc2);white-space:nowrap}
+.badge.g{background:rgba(201,162,39,.13);border-color:rgba(227,192,90,.34);color:var(--gold2)}
+.formula{margin:18px 0 0;font-family:var(--mono);font-size:12px;color:var(--mut);
+  border-left:3px solid var(--acc);padding:10px 0 10px 14px;background:#0b0d12;border-radius:0 6px 6px 0;line-height:1.7}
+.formula b{color:#fff;font-weight:600}
+.btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+button{display:inline-flex;align-items:center;gap:8px;cursor:pointer;font-family:var(--mono);
+  font-size:11.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
+  background:linear-gradient(180deg,#dc2a39,var(--acc));color:#fff;border:1px solid #e64553;
+  border-radius:7px;padding:11px 17px;transition:.15s}
+button:hover{filter:brightness(1.1);transform:translateY(-1px)}
+button.sec{background:#1a1d24;color:var(--txt);border-color:var(--line2)}
+button.sec:hover{background:#22262f;border-color:var(--acc);filter:none}
+button.del{background:transparent;border:none;color:var(--dim);padding:6px;letter-spacing:0}
+button.del:hover{color:var(--warn);background:rgba(217,83,79,.12);transform:none;filter:none}
+
+/* ===== TABLEAUX ===== */
+.scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:880px}
+thead th{position:sticky;top:0;z-index:3;background:#0c0e12;color:var(--mut);
+  font-family:var(--mono);font-size:10.5px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;
+  text-align:right;padding:12px;border-bottom:1px solid var(--line2);white-space:nowrap}
+thead th.l{text-align:left}
+tbody td{padding:9px 12px;border-bottom:1px solid #171a20;text-align:right;font-variant-numeric:tabular-nums}
+tbody td.l{text-align:left}
+tbody tr:nth-child(even){background:rgba(255,255,255,.016)}
+tbody tr:hover{background:rgba(200,32,46,.08)}
+tbody tr:last-child td{border-bottom:none}
+td input.prix{width:132px;text-align:right;font-family:var(--mono);font-weight:600;font-size:13px}
+td input.perso{width:74px;text-align:right;font-family:var(--mono);font-size:13px}
+td input.nom{width:198px;font-weight:600}
+td input.mono{width:176px;font-family:var(--mono);font-size:11.5px;color:var(--mut)}
+.new{font-family:var(--mono);font-weight:600;color:#fff;font-size:13.5px}
+.up{font-family:var(--mono);color:var(--ok);font-size:12.5px}
+.tag{display:inline-block;font-family:var(--mono);font-size:10.5px;font-weight:600;
+  letter-spacing:.06em;padding:3px 10px;border-radius:999px;border:1px solid;white-space:nowrap}
+.tag.Automatique{color:#ff9aa1;border-color:rgba(255,90,99,.34);background:rgba(200,32,46,.15)}
+.tag.Poing{color:#e3c05a;border-color:rgba(227,192,90,.32);background:rgba(201,162,39,.13)}
+.tag.Pompe{color:#68d39a;border-color:rgba(104,211,154,.32);background:rgba(63,174,114,.13)}
+.delcell{width:46px;text-align:center}
+
+/* ===== FORMULAIRE ===== */
+.form{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:15px;align-items:end}
+.f label{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--mut);margin-bottom:8px}
+.f input,.f select{width:100%}
+
+/* ===== PIED ===== */
+footer{position:relative;z-index:2;border-top:1px solid var(--line);margin-top:12px;
+  background:#0a0c10;padding:20px 26px 30px}
+footer .in{max-width:1340px;margin:auto;display:flex;justify-content:space-between;
+  gap:16px;flex-wrap:wrap;font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;
+  color:var(--dim);text-transform:uppercase;line-height:1.9}
+footer .note{max-width:640px;text-transform:none;letter-spacing:.02em;font-size:11.5px;color:var(--mut)}
+</style>
+</head>
+<body>
+
+<div class="classbar">
+  <span>Serveur Unity Role Play · GTA RP</span><em>//</em>
+  <span>Gestion économique</span><em>//</em>
+  <span class="live"><i></i> Session active</span><em>//</em>
+  <span>Grille tarifaire — destruction d'armes</span>
+</div>
+
+<header>
+  <div class="head">
+    <div class="logo">
+      <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2l7 3v6c0 5-3 8.5-7 11-4-2.5-7-6-7-11V5l7-3z"/>
+        <path d="M9 11.5l2 2 4-4"/>
+      </svg>
+    </div>
+    <div class="titles">
+      <div class="kicker">Dossier n° UN-2026-0417 · Réglementation</div>
+      <h1>Destruction des <span class="thin">armes à feu</span></h1>
+      <div class="sub">Grille tarifaire officielle — paramètres configurables en direct</div>
+    </div>
+    <div class="srv">
+      <span class="chip">Serveur <b>Unity Role Play</b></span>
+      <span class="chip on">Économie <b>en jeu</b></span>
+    </div>
+  </div>
+</header>
+
+<div class="index">
+  <div class="in">
+    <a href="#param">01 · Paramètres</a>
+    <a href="#ajout">02 · Ajouter une arme</a>
+    <a href="#normales">03 · Armes normales</a>
+    <a href="#boutique">04 · Armes boutique</a>
+  </div>
+</div>
+
+<main>
+
+<section class="panel" id="param">
+  <div class="cap"><span class="fold"></span><h2>Paramètres de calcul</h2><span class="ref">Section 01</span></div>
+  <div class="body">
+    <div class="params">
+      <div class="grp">
+        <div class="gl">Augmentation générale <b>· toutes armes</b></div>
+        <div class="row"><input type="range" id="base_r" min="0" max="150"><input type="number" id="base"> %</div>
+        <div class="readout"><span>Taux de base appliqué</span><span class="badge" id="t_base"></span></div>
+      </div>
+      <div class="grp">
+        <div class="gl">Supplément <b>· armes automatiques</b></div>
+        <div class="row"><input type="range" id="auto_r" min="0" max="150"><input type="number" id="auto"> %</div>
+        <div class="readout"><span>Taux total automatique</span><span class="badge g" id="t_auto"></span></div>
+      </div>
+      <div class="grp">
+        <div class="gl">Supplément <b>· pistolets / poing</b></div>
+        <div class="row"><input type="range" id="poing_r" min="0" max="150"><input type="number" id="poing"> %</div>
+        <div class="readout"><span>Taux total poing</span><span class="badge g" id="t_poing"></span></div>
+      </div>
+      <div class="grp">
+        <div class="gl">Supplément <b>· fusils à pompe</b></div>
+        <div class="row"><input type="range" id="pompe_r" min="0" max="150"><input type="number" id="pompe"> %</div>
+        <div class="readout"><span>Taux total pompe</span><span class="badge g" id="t_pompe"></span></div>
+      </div>
+      <div class="grp">
+        <div class="gl">Arrondi <b>· multiple de</b></div>
+        <div class="row"><select id="arr"><option>1</option><option>100</option><option>500</option><option>1000</option><option>5000</option></select><span style="color:var(--mut);font-family:var(--mono)">$</span></div>
+        <div class="readout"><span>Prix final arrondi</span><span class="badge">Règle</span></div>
+      </div>
+      <div class="grp">
+        <div class="gl">Armes boutique <b>· prix avec skin</b></div>
+        <div class="row"><input type="number" id="skin" step="0.1" min="1"><span style="color:var(--mut);font-family:var(--mono)">×</span></div>
+        <div class="readout"><span>Coefficient du prix nu</span><span class="badge">Skin</span></div>
+      </div>
+    </div>
+
+    <p class="formula"><b>Nouveau prix</b> = Prix actuel × (1 + % / 100), arrondi au multiple choisi.<br>
+    Le % appliqué est celui de la catégorie (base + supplément), sauf si un <b>% perso</b> est renseigné pour l'arme.</p>
+
+    <div class="btns">
+      <button onclick="exportCSV()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg>
+        Exporter CSV
+      </button>
+      <button class="sec" onclick="copyText()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+        Copier pour Discord
+      </button>
+      <button class="sec" onclick="resetAll()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg>
+        Réinitialiser
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="panel" id="ajout">
+  <div class="cap"><span class="fold"></span><h2>Enregistrer une nouvelle arme</h2><span class="ref">Section 02</span></div>
+  <div class="body">
+    <div class="form">
+      <div class="f"><label>Nom de l'arme</label><input id="a_nom" placeholder="ex : Carabine Requin"></div>
+      <div class="f"><label>Classement</label><select id="a_bout"><option value="0">Arme normale</option><option value="1">Arme boutique (skin)</option></select></div>
+      <div class="f"><label>Catégorie</label><select id="a_cat"><option>Automatique</option><option>Poing</option><option>Pompe</option></select></div>
+      <div class="f"><label>Modèle (optionnel)</label><input id="a_mod" placeholder="weapon_..."></div>
+      <div class="f"><label>Prix actuel ($)</label><input id="a_prix" type="number" step="500"></div>
+      <div class="f"><label>% perso (vide = catégorie)</label><input id="a_perso" type="number"></div>
+      <div class="f"><button style="width:100%;justify-content:center" onclick="addWeapon()">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+        Enregistrer</button></div>
+    </div>
+  </div>
+</section>
+
+<section class="panel" id="normales">
+  <div class="cap"><span class="fold"></span><h2>Armes normales — grille de base</h2><span class="ref" id="refN"></span></div>
+  <div class="scroll">
+    <table id="tN"><thead><tr>
+      <th class="l">Arme</th><th class="l">Catégorie</th><th>Prix actuel</th><th>% perso</th><th>% appliqué</th><th>Nouveau prix</th><th>Hausse</th><th></th>
+    </tr></thead><tbody></tbody></table>
+  </div>
+</section>
+
+<section class="panel" id="boutique">
+  <div class="cap"><span class="fold"></span><h2>Armes boutique — versions à skin</h2><span class="ref" id="refB"></span></div>
+  <div class="scroll">
+    <table id="tB"><thead><tr>
+      <th class="l">Arme</th><th class="l">Modèle</th><th class="l">Catégorie</th><th>Prix actuel</th><th>% perso</th><th>% appliqué</th><th>Nouveau sans skin</th><th>Nouveau avec skin</th><th></th>
+    </tr></thead><tbody></tbody></table>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="in">
+    <div>Serveur Unity Role Play · GTA RP<br>Dossier UN-2026-0417 · Révision 5</div>
+    <div class="note">Grille des prix des destructions d'armes pour l'équipe 911 de Unity Role Play · V2</div>
+    <div>Destruction d'armes à feu<br>Document de travail</div>
+  </div>
+</footer>
+
+<script>
+const DEF_P = {base:10, auto:20, poing:30, pompe:10, arr:500, skin:2};
+const W=(nom,cat,prix,perso="",bout=0,mod="")=>({nom,cat,prix,perso,bout,mod});
+const DEF_W = [
+ W("Pétoire","Poing",20000), W("Pistolet","Poing",28000), W("Pistolet vintage","Poing",30000),
+ W("Pistolet cal.50","Poing",40000), W("Pistolet lourd","Poing",52000), W("Revolver lourd","Poing",56000),
+ W("Pistolet automatique","Automatique",129500), W("Fusil à canon scié","Pompe",160000),
+ W("Mitraillette légère","Automatique",185000), W("Pistolet-mitrailleur","Automatique",210000),
+ W("Mitraillette","Automatique",320000), W("Sulfateuse Gusenberg","Automatique",335000),
+ W("Fusil compact","Automatique",500000,40), W("Fusil militaire","Automatique",800000,50),
+ W("Fusil d'assaut","Automatique",5000000,110),
+ W("TEC 9 MF","Automatique",129500,"",1,"weapon_tec9mf"), W("TEC9MB","Automatique",129500,"",1,"weapon_tec9mb"),
+ W("Uzi Pâques","Automatique",185000,"",1,"weapon_easteruzi"), W("Pompe Requin","Pompe",160000,"",1,"weapon_shotgunshark"),
+ W("Mousquet","Poing",20000,"",1,"weapon_musket"), W("Pistolet Cal.50 Requin","Poing",40000,"",1,"weapon_deagleshark"),
+ W("Desert Purple","Poing",40000,"",1,"weapon_desertpurple"), W("Deagle Dragon","Poing",40000,"",1,"weapon_deagledragon"),
+ W("Pistolet Requin","Poing",28000,"",1,"weapon_pistolshark"), W("Pistolet XoXo","Poing",28000,"",1,"weapon_pxoxo"),
+ W("Pistolet Patriot","Poing",28000,"",1,"weapon_pistolpatriot"), W("Pistolet de Pâques","Poing",28000,"",1,"weapon_easterpistol")
+];
+const KEY="gta_destruction_v5";
+const fresh=()=>({p:{...DEF_P}, w:JSON.parse(JSON.stringify(DEF_W))});
+let S = JSON.parse(localStorage.getItem(KEY)||"null") || fresh();
+const $=id=>document.getElementById(id);
+const fmt=n=>Math.round(n).toLocaleString("fr-FR")+" $";
+const KMAP={Automatique:"auto",Poing:"poing",Pompe:"pompe"};
+const rate=w=> (w.perso!=="" && w.perso!=null) ? +w.perso : (+S.p.base) + (+S.p[KMAP[w.cat]]);
+const rnd=x=>{const a=+S.p.arr||1;return Math.round(x/a)*a};
+const np=w=>rnd(w.prix*(1+rate(w)/100));
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const catSel=(w,i)=>`<select data-i="${i}" data-k="cat">${["Automatique","Poing","Pompe"].map(c=>`<option ${w.cat==c?"selected":""}>${c}</option>`).join("")}</select>`;
+const TRASH=`<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18"/><path d="M8 6V4h8v2"/><path d="M19 6l-1 14H6L5 6"/><path d="M10 11v6M14 11v6"/></svg>`;
+
+function buildTables(){
+  let n="",b="";
+  S.w.forEach((w,i)=>{
+    const common=`<td><input class="prix" type="number" step="500" data-i="${i}" data-k="prix" value="${w.prix}"></td>
+      <td><input class="perso" type="number" data-i="${i}" data-k="perso" value="${w.perso}" placeholder="auto"></td>
+      <td id="r${i}"></td><td class="new" id="n${i}"></td>`;
+    const del=`<td class="delcell"><button class="del" title="Supprimer" onclick="delW(${i})">${TRASH}</button></td>`;
+    if(w.bout) b+=`<tr><td class="l"><input class="nom" data-i="${i}" data-k="nom" value="${esc(w.nom)}"></td>
+      <td class="l"><input class="mono" data-i="${i}" data-k="mod" value="${esc(w.mod)}"></td>
+      <td class="l">${catSel(w,i)}</td>${common}<td class="new" id="s${i}"></td>${del}</tr>`;
+    else n+=`<tr><td class="l"><input class="nom" data-i="${i}" data-k="nom" value="${esc(w.nom)}"></td>
+      <td class="l">${catSel(w,i)}</td>${common}<td class="up" id="h${i}"></td>${del}</tr>`;
+  });
+  $("tN").tBodies[0].innerHTML=n; $("tB").tBodies[0].innerHTML=b;
+  $("refN").textContent=S.w.filter(w=>!w.bout).length+" entrées · Section 03";
+  $("refB").textContent=S.w.filter(w=>w.bout).length+" entrées · Section 04";
+  document.querySelectorAll("td [data-k]").forEach(e=>{
+    e.oninput=e.onchange=()=>{const w=S.w[e.dataset.i],k=e.dataset.k;
+      w[k]= k==="prix" ? (+e.value||0) : e.value; render();};
+  });
+}
+function render(){
+  for(const k of ["base","auto","poing","pompe"]){ $(k).value=S.p[k]; $(k+"_r").value=S.p[k]; }
+  $("arr").value=S.p.arr; $("skin").value=S.p.skin;
+  $("t_base").textContent="+"+(+S.p.base)+" %";
+  for(const k of ["auto","poing","pompe"]) $("t_"+k).textContent="+"+((+S.p.base)+(+S.p[k]))+" %";
+  S.w.forEach((w,i)=>{
+    $("r"+i).innerHTML=`<span class="tag ${w.cat}">+${rate(w)} %</span>`;
+    $("n"+i).textContent=fmt(np(w));
+    if(w.bout) $("s"+i).textContent=fmt(rnd(np(w)*S.p.skin));
+    else $("h"+i).textContent="+"+fmt(np(w)-w.prix);
+  });
+  localStorage.setItem(KEY,JSON.stringify(S));
+}
+for(const k of ["base","auto","poing","pompe"]) $(k).oninput=$(k+"_r").oninput=e=>{S.p[k]=+e.target.value||0;render()};
+$("arr").onchange=e=>{S.p.arr=+e.target.value;render()};
+$("skin").oninput=e=>{S.p.skin=+e.target.value||1;render()};
+
+function addWeapon(){
+  const nom=$("a_nom").value.trim(), prix=+$("a_prix").value;
+  if(!nom||!prix){alert("Indique au moins un nom et un prix.");return;}
+  S.w.push(W(nom,$("a_cat").value,prix,$("a_perso").value,+$("a_bout").value,$("a_mod").value.trim()));
+  ["a_nom","a_prix","a_perso","a_mod"].forEach(id=>$(id).value="");
+  buildTables(); render();
+}
+function delW(i){ if(confirm("Supprimer « "+S.w[i].nom+" » ?")){S.w.splice(i,1);buildTables();render();} }
+
+function exportCSV(){
+  const r=[["Arme","Type","Modèle","Catégorie","Prix actuel","% appliqué","Nouveau prix","Avec skin"]];
+  S.w.forEach(w=>r.push([w.nom,w.bout?"Boutique":"Normale",w.mod,w.cat,w.prix,rate(w),np(w),w.bout?rnd(np(w)*S.p.skin):""]));
+  const csv="\ufeff"+r.map(x=>x.map(v=>`"${String(v).replace(/"/g,'""')}"`).join(";")).join("\n");
+  const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([csv],{type:"text/csv"}));a.download="grille_destruction_unity.csv";a.click();
+}
+function copyText(){
+  let t="**🔫 Unity Role Play — Grille de destruction des armes**\n";
+  S.w.filter(w=>!w.bout).forEach(w=>t+=`${w.nom} = ${fmt(np(w))}\n`);
+  t+="\n**Armes boutique (sans skin / avec skin)**\n";
+  S.w.filter(w=>w.bout).forEach(w=>t+=`${w.nom} = ${fmt(np(w))} / ${fmt(rnd(np(w)*S.p.skin))}\n`);
+  navigator.clipboard.writeText(t).then(()=>alert("Grille copiée !"));
+}
+function resetAll(){ if(confirm("Tout remettre aux valeurs de départ ? Les armes ajoutées seront supprimées.")){S=fresh();buildTables();render();} }
+buildTables(); render();
+</script>
+</body>
+</html>
